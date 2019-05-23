@@ -40,8 +40,8 @@ const onFocus = async (page, scan, count, index, browser) => {
 
 	await page.screenshot({path: '登陆页面.png'});
 
-	await page.type('#loginName', 'aaa');    
-	await page.type('#loginPassword', 'aaaa');
+	await page.type('#loginName', '1111');    
+	await page.type('#loginPassword', '11111??');
 
 	await page.screenshot({path: '账号密码.png'});
 
