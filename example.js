@@ -38,7 +38,7 @@ const onFocus = async (page, scan, count, index, browser) => {
 	
 	for (let key in oAs) {
 		console.log('点击中')
-		await page.waitFor(10000);
+		await page.waitFor(25501 + index);
 		await oAs[key].click()
 	}
 
@@ -64,13 +64,12 @@ const onFocus = async (page, scan, count, index, browser) => {
 	await page.screenshot({path: '登陆页面.png'});
 	await page.type('#loginname', '12');    
 	await page.type('input[type="password"]', '1212');
-
 	await page.screenshot({path: '账号密码.png'});
+	
 	const oButton = await page.$('a[action-type="btn_submit"]')
+
 	await oButton.click();
 	await page.waitFor(10000);
-
-	
 
 	while(page.url() === 'https://weibo.com/'){
 		console.log('需要登陆')
@@ -78,10 +77,6 @@ const onFocus = async (page, scan, count, index, browser) => {
 
 	
 	await page.waitFor(10000);
-
-	await page.screenshot({path: '登陆页面1111.png'});
-
-
 
 	await page.screenshot({path: '登陆后页面.png'});
 
