@@ -56,8 +56,8 @@ const onFocus = async (page, scan, count, index, browser) => {
 
   await page.waitFor(10000)
   await page.screenshot({path: '登陆页面.png'})
-  await page.type('#loginname', '18301496816')
-  await page.type('input[type="password"]', 'linzi295??')
+  await page.type('#loginname', '123123')
+  await page.type('input[type="password"]', '111??')
   await page.screenshot({path: '账号密码.png'})
 
   const oButton = await page.$('a[action-type="btn_submit"]')
